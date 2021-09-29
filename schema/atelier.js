@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const UserSchema = mongoose.Schema({
     
-    _id: {type:Number, required:true},
+    id: {type:Number, required:true},
     user: {type:Number, required:true},
     titre: { type: String, required: true},
     description: { type: String, required: true },
@@ -24,6 +24,6 @@ const UserSchema = mongoose.Schema({
 );
 
 module.exports = mongoose.model('atelier', UserSchema);
-mongoose.set('useNewUrlParser', true);
-mongoose.set('useFindAndModify', false);
-mongoose.set('useCreateIndex', true);
+// mongoose.set('useNewUrlParser', true);
+// mongoose.set('useFindAndModify', false);
+// mongoose.set('useCreateIndex', true);

@@ -19,12 +19,12 @@ exports.signup = (req, res) => {
                 if (users.length == 0) {
                     idautom = 0
                 } else {
-                    idautom = parseInt(users[users.length - 1]._id) + 1
+                    idautom = parseInt(users[users.length - 1].id) + 1
                 }
                 console.log('user==', idautom);
 
                 var user = {
-                    _id: idautom,
+                    id: idautom,
                     nom: req.body.nom,
                     prenom: req.body.prenom,
                     email: req.body.email,
@@ -61,7 +61,7 @@ exports.signup = (req, res) => {
                             res.status(200).json({
                                 "text": "Succès",
                                 "token": user.getToken(),
-                                "id": user._id
+                                "id": user.id
                             })
                         }
                     })
@@ -118,7 +118,7 @@ exports.login = (req, res) => {
                     res.status(200).json({
                         "token": user.getToken(),
                         "text": "Authentification réussi",
-                        'id': user._id
+                        'id': user.id
                     })
                 } else {
                     res.status(401).json({
@@ -150,13 +150,13 @@ exports.createPart = (req, res) => {
             if (user.length == 0) {
                 idautom = 0
             } else {
-                idautom = parseInt(user[user.length - 1]._id) + 1
+                idautom = parseInt(user[user.length - 1].id) + 1
             }
 
             // //images
             const profil = new Particulier({
 
-                _id: idautom,
+                id: idautom,
                 nom: req.body.nom,
                 prenom: req.body.prenom,
                 email: req.body.email,
@@ -241,7 +241,7 @@ exports.createArt = (req, res) => {
             if (user.length == 0) {
                 idautom = 0
             } else {
-                idautom = parseInt(user[user.length - 1]._id) + 1
+                idautom = parseInt(user[user.length - 1].id) + 1
             }
 
             // //images
@@ -257,7 +257,7 @@ exports.createArt = (req, res) => {
             });
             const profil = new Atelier({
 
-                _id: idautom,
+                id: idautom,
                 user: req.body.user,
                 titre: req.body.titre,
                 description: req.body.description,
@@ -404,7 +404,7 @@ exports.auto = (req, res) => {
         .then(notes => {
             
             for (let i = 0; i < notes.length; i++) {
-                if (req.params.noteId == notes[i]._id) {
+                if (req.params.noteId == notes[i].id) {
                     notes[i].placeres = notes[i].placeres + 1;
                     //res.send(notes);
 
@@ -496,7 +496,7 @@ exports.activer = (req, res) => {
                             });
                         });
                 }
-                if (req.params.noteId == notes[i]._id) {
+                if (req.params.noteId == notes[i].id) {
                     notes[i].placeres = notes[i].placeres + 1;
                     //res.send(notes);
 

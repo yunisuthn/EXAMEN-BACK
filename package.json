@@ -1,25 +1,38 @@
 {
-    "name": "exam",
-    "version": "1.0.0",
-    "main": "server.js",
-    "scripts": {
-        "start": "node server.js"
-    },
-    "dependencies": {
-        "create-react-app": "^1.5.2",
-        "jwt-simple": "^0.5.1",
-        "password-hash": "^1.2.2",
-        "body-parser": "^1.19.0",
-        "cors": "^2.8.5",
-        "express": "^4.16.4",
-        "express-fileupload": "^1.1.4",
-        "express-generator": "^4.16.1",
-        "express-mongo-db": "^2.0.4",
-        "gridfs-stream": "^1.1.1",
-        "method-override": "^3.0.0",
-        "mongodb": "^3.2.4",
-        "mongoose": "^5.5.8",
-        "multer": "^1.4.1",
-        "multer-gridfs-storage": "^3.2.3"
-    }
+  "name": "examen-back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yunisuthn/EXAMEN-BACK.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yunisuthn/EXAMEN-BACK/issues"
+  },
+  "homepage": "https://github.com/yunisuthn/EXAMEN-BACK#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "create-react-app": "^4.0.3",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "express-generator": "^4.16.1",
+    "express-mongo-db": "^2.0.4",
+    "gridfs-stream": "^1.1.1",
+    "jwt-simple": "^0.5.6",
+    "method-override": "^3.0.0",
+    "mongodb": "^4.1.2",
+    "mongoose": "^6.0.8",
+    "multer": "^1.4.3",
+    "multer-gridfs-storage": "^5.0.1",
+    "nodemon": "^2.0.13",
+    "password-hash": "^1.2.2"
+  }
 }
